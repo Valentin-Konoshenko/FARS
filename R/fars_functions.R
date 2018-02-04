@@ -46,7 +46,8 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  file_name <- sprintf("accident_%d.csv.bz2", year)
+  system.file("extdata", file_name, package = "MyFirstRPackage")
 }
 
 #' Return FARS data for a set of years
@@ -61,12 +62,12 @@ make_filename <- function(year) {
 #'
 #' @return Returns a tibble containing FARS data for the chosen years (a row per an accident).
 #'  The tibble returns only two columns:
-#'\itemize {
-#' \item \code{MONTH} {The month of an accident}
-#' \item \code{year} {The year of an accident}}
 #'
-#' @importFrom dplyr mutate select
-#' @importFrom magrittr %>%
+#'\describe{
+#' \item{MONTH}{The month of an accident}
+#' \item{year}{The year of an accident}}
+#'
+#' @importFrom dplyr mutate select %>%
 #'
 #' @examples
 #' accidents <- fars_read_years(c(2013, 2014))
@@ -95,15 +96,14 @@ fars_read_years <- function(years) {
 #'
 #' @return Returns a tibble containing aggregated number of accidents.
 #'  The tibble has the following columns:
-#' \itemize {
-#'  \item \code{MONTH} {The month of a year, \code{[1:12]} }
-#'  \item \code{<year_1>} {The first year from the \code{years} parameter}
-#'  \item \code{...}
-#'  \item \code{<year_N>} {The last year from the \code{years} parameter}}
+#' \describe{
+#'  \item{MONTH}{The month of a year, \code{[1:12]} }
+#'  \item{<year_1>}{The first year from the \code{years} parameter}
+#'  \item{...}{}
+#'  \item{<year_N>}{The last year from the \code{years} parameter}}
 #'
-#' @importFrom dplyr bind_rows group_by summarize
+#' @importFrom dplyr bind_rows group_by summarize %>%
 #' @importFrom tidyr spread
-#' @importFrom magrittr %>%
 #'
 #' @examples
 #' fars_summarize_years(c(2013, 2014))
