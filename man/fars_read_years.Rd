@@ -14,9 +14,10 @@ otherwise, an exception is trown.}
 \value{
 Returns a tibble containing FARS data for the chosen years (a row per an accident).
  The tibble returns only two columns:
-\itemize {
-\item \code{MONTH} {The month of an accident}
-\item \code{year} {The year of an accident}}
+
+\describe{
+\item{MONTH}{The month of an accident}
+\item{year}{The year of an accident}}
 }
 \description{
 This is an internal function. It returns FARS data for a set of years (defined using \code{years} parameter).

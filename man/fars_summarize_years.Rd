@@ -14,11 +14,11 @@ otherwise, an exception is trown.}
 \value{
 Returns a tibble containing aggregated number of accidents.
  The tibble has the following columns:
-\itemize {
- \item \code{MONTH} {The month of a year, \code{[1:12]} }
- \item \code{<year_1>} {The first year from the \code{years} parameter}
- \item \code{...}
- \item \code{<year_N>} {The last year from the \code{years} parameter}}
+\describe{
+ \item{MONTH}{The month of a year, \code{[1:12]} }
+ \item{<year_1>}{The first year from the \code{years} parameter}
+ \item{...}{}
+ \item{<year_N>}{The last year from the \code{years} parameter}}
 }
 \description{
 The function processes FARS data to aggregate number of accidents by month and year.
