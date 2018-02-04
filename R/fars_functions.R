@@ -16,7 +16,7 @@
 #' @importFrom readr read_csv
 #'
 #' @examples
-#' data <- fars_read("accident_2013.csv.bz2")
+#' data2013 <- fars_read("accident_2013.csv.bz2")
 #'
 #' @export
 fars_read <- function(filename) {
