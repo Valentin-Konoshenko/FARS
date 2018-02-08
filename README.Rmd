@@ -33,6 +33,7 @@ It probably makes sense to start analysis FARS data from exprloring the big pict
 ```{r}
 ## exploring summarized data
 
+
 FARS::fars_summarize_years(2013:2015)
 ```
 You can focus on a specific state and a year and plot the accidents on a map using `fars_map_state`:
@@ -54,6 +55,6 @@ summarized_data <- FARS::fars_read(data_file) %>%
   summarise(number_of_cases = n()) %>%
   arrange(number_of_cases)
 d <- summarized_data[c(1, nrow(summarized_data)), ]
-cat("\nThe least dengures hour:", unlist(d[1, "HOUR"]), 
-    "\nThe most dengures hour: ", unlist(d[2, "HOUR"]))
+cat("The least dengures hour:", as.numeric(d[1, "HOUR"]), "\nThe most dengures hour: ", as.numeric(d[2, "HOUR"]))
+
 ```
