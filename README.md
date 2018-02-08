@@ -71,9 +71,9 @@ summarized_data <- FARS::fars_read(data_file) %>%
   summarise(number_of_cases = n()) %>%
   arrange(number_of_cases)
 d <- summarized_data[c(1, nrow(summarized_data)), ]
-cat("\nThe least dengures hour:", unlist(d[1, "HOUR"]), 
-    "\nThe most dengures hour: ", unlist(d[2, "HOUR"]))
-#> 
+
+cat("The least dengures hour:", as.numeric(d[1, "HOUR"]), "\nThe most dengures hour: ", as.numeric(d[2, "HOUR"]))
+
 #> The least dengures hour: 4 
 #> The most dengures hour:  18
 ```
