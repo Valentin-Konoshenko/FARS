@@ -49,7 +49,9 @@ You can focus on a specific state and a year and plot the accidents on a map usi
 FARS::fars_map_state(6, 2015)
 ```
 
-![](README-unnamed-chunk-3-1.png) The `fars_read` function will be useful if you want to work with raw data directly. For instanse let's find out the least and the most dangerous hours
+![](README-unnamed-chunk-3-1.png)
+
+The `fars_read` function will be useful if you want to work with raw data directly. For instanse let's find out the least and the most dangerous hours
 
 ``` r
 ## the least and the most dangerous hours
@@ -71,9 +73,9 @@ summarized_data <- FARS::fars_read(data_file) %>%
   summarise(number_of_cases = n()) %>%
   arrange(number_of_cases)
 d <- summarized_data[c(1, nrow(summarized_data)), ]
-
-cat("The least dengures hour:", as.numeric(d[1, "HOUR"]), "\nThe most dengures hour: ", as.numeric(d[2, "HOUR"]))
-
-#> The least dengures hour: 4 
-#> The most dengures hour:  18
+cat("\nThe least dangerous hour:", unlist(d[1, "HOUR"]), 
+    "\nThe most dangerous hour: ", unlist(d[2, "HOUR"]))
+#> 
+#> The least dangerous hour: 4 
+#> The most dangerous hour:  18
 ```
