@@ -4,8 +4,7 @@ Title: FARS data
 Version: 0.1.0
 Author: Valentin Konoshenko
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: FARS has been developed in a context of the Coursera's course "Building an R Package". 
-The package provides a few very basic functions, which work on top of sample FARS data embedded in the package.
+Description: FARS has been developed in a context of the Coursera's course "Building an R Package". The package provides a few very basic functions, which work on top of sample FARS data embedded in the package.
 License: CC0
 Encoding: UTF-8
 LazyData: true
