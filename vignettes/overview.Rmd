@@ -1,32 +1,23 @@
 ---
-output: github_document
+title: "Overview"
+author: "Valentin Konoshenko"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
+  comment = "#>"
 )
 ```
 
-# FARS
-
 FARS has been developed in a context of the Coursera's course "[Building an R Package](https://www.coursera.org/learn/r-packages/home/welcome)". 
 The package provides a few very basic functions, which work on top of embedded in the package sample FARS data (for more information about FARS data please see [Fatality Analysis Reporting System](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars)).
-
-## Installation
-
-You can install FARS from github with:
-
-```{r gh-installation, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("Valentin-Konoshenko/FARS")
-```
-
-## Usage
 
 ## Usage
 

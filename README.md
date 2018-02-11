@@ -18,11 +18,14 @@ devtools::install_github("Valentin-Konoshenko/FARS")
 Usage
 -----
 
+Usage
+-----
+
+### Exploring summarized data
+
 It probably makes sense to start analysis FARS data from exprloring the big picture. It is where `fars_summarize_years` comes into play.
 
 ``` r
-## exploring summarized data
-
 FARS::fars_summarize_years(2013:2015)
 #> # A tibble: 12 x 4
 #>    MONTH `2013` `2014` `2015`
@@ -41,21 +44,24 @@ FARS::fars_summarize_years(2013:2015)
 #> 12    12   2457   2604   2781
 ```
 
+### Plotting the accidents on a map
+
 You can focus on a specific state and a year and plot the accidents on a map using `fars_map_state`:
 
 ``` r
-## plotting the accidents on a map
-
 FARS::fars_map_state(6, 2015)
 ```
 
 ![](README-unnamed-chunk-3-1.png)
+
+### Exploring raw data
 
 The `fars_read` function will be useful if you want to work with raw data directly. For instanse let's find out the least and the most dangerous hours
 
 ``` r
 ## the least and the most dangerous hours
 
+library(knitr)
 library(dplyr)
 #> 
 #> Attaching package: 'dplyr'
@@ -70,9 +76,21 @@ data_file <- FARS::make_filename(2015)
 summarized_data <- FARS::fars_read(data_file) %>%
   filter(HOUR != 99) %>%
   group_by(HOUR) %>% 
-  summarise(number_of_cases = n()) %>%
-  arrange(number_of_cases)
-d <- summarized_data[c(1, nrow(summarized_data)), ]
+  summarise(number_of_accidents = n()) %>%
+  arrange(number_of_accidents)
+d <- rbind(
+  head(summarized_data, 1),
+  tail(summarized_data, 1))
+knitr::kable(d)
+```
+
+|  HOUR|  number\_of\_accidents|
+|-----:|----------------------:|
+|     4|                    741|
+|    18|                   1878|
+
+``` r
+
 cat("\nThe least dangerous hour:", unlist(d[1, "HOUR"]), 
     "\nThe most dangerous hour: ", unlist(d[2, "HOUR"]))
 #> 
