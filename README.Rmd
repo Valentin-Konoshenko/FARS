@@ -28,8 +28,6 @@ devtools::install_github("Valentin-Konoshenko/FARS")
 
 ## Usage
 
-## Usage
-
 ### Exploring summarized data
 
 It probably makes sense to start analysis FARS data from exprloring the big picture. It is where 
