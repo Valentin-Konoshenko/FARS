@@ -2,7 +2,7 @@ Package: FARS
 Type: Package
 Title: FARS data
 Version: 0.1.0
-Imports: dplyr, graphics, maps, readr, tidyr
+Imports: dplyr, graphics, maps, readr, tidyr, testthat
 Author: Valentin Konoshenko
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: FARS has been developed in a context of the Coursera's course "Building an R Package". The package provides a few very basic functions, which work on top of sample FARS data embedded in the package.

@@ -139,7 +139,7 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
-#' fars_map_state(2, year = 2015)
+#' fars_map_state(1, year = 2015)
 #' fars_map_state(state.num = 1, year = 2013)
 #'
 #' @export
