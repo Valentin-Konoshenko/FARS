@@ -22,6 +22,6 @@ For more information about FARS data, see
 \href{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System}.
 }
 \examples{
-data2013 <- fars_read("accident_2013.csv.bz2")
+\dontrun{data2013 <- fars_read("accident_2013.csv.bz2")}
 
 }
