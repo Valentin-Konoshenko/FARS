@@ -1,5 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Build Status](https://travis-ci.org/Valentin-Konoshenko/FARS.svg?branch=master)](https://travis-ci.org/Valentin-Konoshenko/FARS)
+
 FARS
 ====
 
@@ -14,9 +16,6 @@ You can install FARS from github with:
 # install.packages("devtools")
 devtools::install_github("Valentin-Konoshenko/FARS")
 ```
-
-Usage
------
 
 Usage
 -----
