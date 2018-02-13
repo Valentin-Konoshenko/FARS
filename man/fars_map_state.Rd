@@ -26,7 +26,7 @@ For more information about FARS data, see
 \href{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System}.
 }
 \examples{
-fars_map_state(2, year = 2015)
+fars_map_state(1, year = 2015)
 fars_map_state(state.num = 1, year = 2013)
 
 }
