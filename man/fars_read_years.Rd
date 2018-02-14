@@ -25,6 +25,6 @@ For more information about FARS data, see
 \href{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System}.
 }
 \examples{
-accidents <- fars_read_years(c(2013, 2014))
-fars_read_years(2015)
+accidents <- FARS:::fars_read_years(c(2013, 2014))
+FARS:::fars_read_years(2015)
 }

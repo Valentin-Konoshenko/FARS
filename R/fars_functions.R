@@ -70,8 +70,8 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate select %>%
 #'
 #' @examples
-#' accidents <- fars_read_years(c(2013, 2014))
-#' fars_read_years(2015)
+#' accidents <- FARS:::fars_read_years(c(2013, 2014))
+#' FARS:::fars_read_years(2015)
 fars_read_years <- function(years) {
   lapply(years, function(year) {
     file <- make_filename(year)
